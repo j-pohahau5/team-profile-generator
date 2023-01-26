@@ -1,0 +1,30 @@
+{
+  
+  "name": "team-profile-generator",
+  "description": "# 10 Object-Oriented Programming: Team Profile Generator",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/j-pohahau5/team-profile-generator.git"
+  },
+  "author": "Jonathan Pohahau",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/j-pohahau5/team-profile-generator/issues"
+  },
+  "homepage": "https://github.com/j-pohahau5/team-profile-generator#readme",
+  "devDependencies": {
+    "jest": "^29.4.0"
+  },
+  "dependencies": {
+    "inquirer": "^8.2.4"
+    
+  }
+}
