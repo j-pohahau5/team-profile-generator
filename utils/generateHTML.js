@@ -1,4 +1,4 @@
-function myTeam(team){
+function myTeam(teamArr){
     const htmlTeam = [];
 
     const myManager = manager => {
@@ -42,15 +42,15 @@ function myTeam(team){
         `;
         htmlTeam.push(htmlIntern);
     }
-    for(var i = 0; i < team.length; i++) {
-        if(team[i].getRole() === "Manager") {
-            myManager(team[i]);
+    for(var i = 0; i < teamArr.length; i++) {
+        if(teamArr[i].getRole() === "Manager") {
+            myManager(teamArr[i]);
         }
-        if(team[i].getRole() === "Engineer") {
-            myEngineer(team[i]);
+        if(teamArr[i].getRole() === "Engineer") {
+            myEngineer(teamArr[i]);
         }
-        if(team[i].getRole() === "Intern") {
-            myIntern(team[i]);
+        if(teamArr[i].getRole() === "Intern") {
+            myIntern(teamArr[i]);
         }
     }
     return htmlTeam.join('');
@@ -58,7 +58,7 @@ function myTeam(team){
 }
 
 
-function generateHTML() {
+function generateHTML(teamArr) {
     // giving the README  template literal so it is structured  and receives data input in the correct area 
     return `<!DOCTYPE html>
     <html lang="en">
@@ -74,7 +74,7 @@ function generateHTML() {
             <h1 class="team-card">My Team</h1>
         </header>
     
-        <main> ${myTeam} </main>
+        <main> ${myTeam(teamArr)} </main>
     
         <footer>
     

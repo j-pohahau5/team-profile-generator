@@ -213,7 +213,7 @@ const addEmployee = () => {
   // });
 };
 function startHtml() {
-  const dom = generateHTML();
+  const dom = generateHTML(teamArr);
   fs.writeFile("index.html", dom, function (err) {
     if (err) throw err;
     console.log("great job!😁");
