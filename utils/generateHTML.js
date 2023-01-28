@@ -7,7 +7,7 @@ function myTeam(teamArr){
                 <h2 class="manager-name container">${manager.name}</h2>
                 <ul class="manger-info container">
                     <li class="id col">ID: ${manager.id}</li>
-                    <li class="email col">Email: <a href="${manager.email}">${manager.email}</a></li>
+                    <li class="email col">Email: <a href="mailto: ${manager.email}">${manager.email}</a></li>
                     <li class="office-number col">Office Number: ${manager.officeNumber}</li>
                 </ul>
             </div>
@@ -21,8 +21,8 @@ function myTeam(teamArr){
                 <h2 class="engineer-name container">${engineer.name}</h2>
                 <ul class="engineer-info container">
                     <li class="id col">ID: ${engineer.id}</li>
-                    <li class="engineer-email col">Email: <a href="${engineer.email}">${manager.email}</a></li>
-                    <li class="engineer-username col">Office Number: ${engineer.userName}</li>
+                    <li class="engineer-email col">Email: <a href="mailto: ${engineer.email}">${engineer.email}</a></li>
+                    <li class="engineer-username col">Github: <a href="https://github.com/${engineer.userName}">${engineer.userName}</a></li>
                 </ul>
             </div>
         `;
@@ -35,8 +35,8 @@ function myTeam(teamArr){
                 <h2 class="intern-name container">${intern.name}</h2>
                 <ul class="intern-info container">
                     <li class="intern-id col">ID: ${intern.id}</li>
-                    <li class="intern-email col">Email: <a href="${intern.email}">${intern.email}</a></li>
-                    <li class="intern-school col">Office Number: ${intern.school}</li>
+                    <li class="intern-email col">Email: <a href="mailto: ${intern.email}">${intern.email}</a></li>
+                    <li class="intern-school col">${intern.school}</li>
                 </ul>
             </div>
         `;
