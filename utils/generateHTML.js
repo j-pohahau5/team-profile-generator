@@ -1,8 +1,11 @@
-function myTeam(teamArr){
-    const htmlTeam = [];
-
-    const myManager = manager => {
-        let htmlManager =  `
+// myTeam function is using the data to correctly display the app
+function myTeam(teamArr) {
+  // empty array to take in all the html strings with data
+  const htmlTeam = [];
+  //  myManager functIon is inserting the correct data in to the html string and pushing it in to an array
+  const myManager = (manager) => {
+    // the manager html template
+    let htmlManager = `
         <div class="manager-card container bg-light mb-2">
                 <h2 class="manager-name container">${manager.name}</h2>
                 <ul class="manger-info container">
@@ -11,12 +14,15 @@ function myTeam(teamArr){
                     <li class="office-number col">Office Number: ${manager.officeNumber}</li>
                 </ul>
             </div>
-        `;  
-        htmlTeam.push(htmlManager);
-    }
+        `;
+    // pushing manager template in to htmlTeam array
+    htmlTeam.push(htmlManager);
+  };
 
-    const myEngineer = engineer => {
-        let htmlEngineer =  `
+  //  myEngineer functIon is inserting the correct data in to the html string and pushing it in to an array
+  const myEngineer = (engineer) => {
+    // the engineer html template
+    let htmlEngineer = `
         <div class="engineer-card container bg-light mb-2">
                 <h2 class="engineer-name container">${engineer.name}</h2>
                 <ul class="engineer-info container">
@@ -26,11 +32,14 @@ function myTeam(teamArr){
                 </ul>
             </div>
         `;
-        htmlTeam.push(htmlEngineer);
-    }
+    // pushing engineer template in to htmlTeam array
+    htmlTeam.push(htmlEngineer);
+  };
 
-    const myIntern = intern => {
-        let htmlIntern =  `
+  //  myIntern functIon is inserting the correct data in to the html string and pushing it in to an array
+  const myIntern = (intern) => {
+    // the intern html template
+    let htmlIntern = `
         <div class="intern-card container bg-light mb-2">
                 <h2 class="intern-name container">${intern.name}</h2>
                 <ul class="intern-info container">
@@ -40,27 +49,32 @@ function myTeam(teamArr){
                 </ul>
             </div>
         `;
-        htmlTeam.push(htmlIntern);
+    // pushing intern template in to htmlTeam array
+    htmlTeam.push(htmlIntern);
+  };
+  //    a for loop so i can pass each function data and to create as many times ass needed
+  for (var i = 0; i < teamArr.length; i++) {
+    // saying if the role equals Manager then passing that data into the myManager function
+    if (teamArr[i].getRole() === "Manager") {
+      myManager(teamArr[i]);
     }
-    for(var i = 0; i < teamArr.length; i++) {
-        if(teamArr[i].getRole() === "Manager") {
-            myManager(teamArr[i]);
-        }
-        if(teamArr[i].getRole() === "Engineer") {
-            myEngineer(teamArr[i]);
-        }
-        if(teamArr[i].getRole() === "Intern") {
-            myIntern(teamArr[i]);
-        }
+    // saying if the role equals Engineer then passing that data into the myManager function
+    if (teamArr[i].getRole() === "Engineer") {
+      myEngineer(teamArr[i]);
     }
-    return htmlTeam.join('');
-    
+    // saying if the role equals Intern then passing that data into the myManager function
+    if (teamArr[i].getRole() === "Intern") {
+      myIntern(teamArr[i]);
+    }
+  }
+  // returning the joined arrays a string
+  return htmlTeam.join("");
 }
 
-
+// creating an html template the being passed multiple div templates
 function generateHTML(teamArr) {
-    // giving the README  template literal so it is structured  and receives data input in the correct area 
-    return `<!DOCTYPE html>
+  // giving the README  template literal so it is structured  and receives data input in the correct area
+  return `<!DOCTYPE html>
     <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -84,7 +98,7 @@ function generateHTML(teamArr) {
     </body>
     </html>
   `;
-  
-  }
+}
 
-  module.exports = generateHTML;
+// exporting the function generateHTML
+module.exports = generateHTML;
