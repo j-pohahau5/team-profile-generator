@@ -4,6 +4,8 @@
 
 I created this project in order to properly generate team webpage  with cards of each team member employee data. reason i built this project so that i can have the user dynamically create a team and see each members info so the employer can directly get to where they want or do something like email their employee by clicking their email address.
 
+Youtube Video Link: (https://youtu.be/G9BDEWkyhOY)
+
 
 ## Table of Contents
 
